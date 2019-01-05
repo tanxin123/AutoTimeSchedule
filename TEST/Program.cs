@@ -8,10 +8,7 @@ namespace TEST
     {
         static void Main(string[] args)
         {
-            //TimeHandle.StartTimeSpanSchedule(3, () =>
-            //{
-            //    Console.WriteLine("{0} 456",DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-            //});
+
 
             TimeHandle timeHandle = new TimeHandle();
             timeHandle.SetAction(()=> {
@@ -22,6 +19,7 @@ namespace TEST
             Thread.Sleep(20000);
             timeHandle.StopSchedule();
             Console.ReadKey();
+
 
         }
     }
